@@ -26,7 +26,11 @@ public class UserRegMain {
         isValid=testData.validateEmail(email);
         System.out.println(isValid?"Email - VALID":"Email -  INVALID");
 
-
+        //validating Phone Number
+        System.out.println("Enter user's Phone Number");
+        String phone=sc.nextLine();
+        isValid=testData.validatePhone(phone);
+        System.out.println(isValid?"Phone Number - VALID":"Phone Number -  INVALID");
 
 
 

@@ -23,6 +23,14 @@ public class UserRegTest {
         boolean result=matcher.matches();
         return result;
     }
+
+    public boolean validatePhone(String data){
+        final String phoneRegex="^91 [1-9]\\d{9}$";
+        Pattern pattern = Pattern.compile(phoneRegex);
+        Matcher matcher = pattern.matcher(data);
+        boolean result=matcher.matches();
+        return result;
+    }
     
     
 }
