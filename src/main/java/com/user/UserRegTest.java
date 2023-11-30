@@ -33,7 +33,7 @@ public class UserRegTest {
     }
 
     public boolean validatePassword(String data){
-        final String passwordRegex = "^(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*()-_+=])[A-Za-z\\d!@#$%^&*()-_+=]{8,}$";
+        final String passwordRegex = "^(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*()-_+=])[A-Za-z\\d]*[!@#$%^&*()-_+=][A-Za-z\\d!@#$%^&*()-_+=]{7,}$";
         Pattern pattern = Pattern.compile(passwordRegex);
         Matcher matcher = pattern.matcher(data.trim());
         boolean result=matcher.matches();
