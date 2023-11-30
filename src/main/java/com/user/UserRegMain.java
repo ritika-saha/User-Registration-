@@ -39,6 +39,36 @@ public class UserRegMain {
          isValid=testData.validatePassword(password);
         System.out.println(isValid?"Password - VALID":"Password -  INVALID");
 
+        //validating given emails
+        String[] emails = {
+            "abc@yahoo.com",
+            "abc-100@yahoo.com",
+            "abc.100@yahoo.com",
+            "abc111@abc.com",
+            "abc-100@abc.net",
+            "abc.100@abc.com.au",
+            "abc@1.com",
+            "abc+100@gmail.com",
+            "abc",
+            "abc@.com.my",
+            "abc123@gmail.a",
+            "abc123@.com",
+            "abc123@.com.com",
+            ".abc@abc.com",
+            "abc()*@gmail.com",
+            "abc@%*.com",
+            "abc..2002@gmail.com",
+            "abc.@gmail.com",
+            "abc@abc@gmail.com",
+            "abc@gmail.com.1a",
+            "abc@gmail.com.aa.au"
+        };
+
+        for(String e:emails){
+            isValid=testData.validateEmail(e);
+            System.out.print(e);
+            System.out.println(isValid?" \t---- Email - VALID":" --- Email -  INVALID");
+        }
 
 
         sc.close();

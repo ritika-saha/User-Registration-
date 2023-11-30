@@ -17,8 +17,8 @@ public class UserRegTest {
     }
 
     public boolean validateEmail(String data){
-        final String emailRegex = "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9]+\\.[a-zA-Z]{2,}";
-        Pattern pattern = Pattern.compile(emailRegex);
+        final String emailRegex = "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$";
+        Pattern pattern = Pattern.compile(emailRegex,Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(data);
         boolean result=matcher.matches();
         return result;
@@ -33,7 +33,7 @@ public class UserRegTest {
     }
 
     public boolean validatePassword(String data){
-        final String passwordRegex = "^(?=.*[A-Z])(?=.*\\d)(?!.*[!@#$%^&*()-_+=].*[!@#$%^&*()-_+=])[A-Za-z\\d!@#$%^&*()-_+=]{8,}$";
+        final String passwordRegex = "^(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*()-_+=])[A-Za-z\\d!@#$%^&*()-_+=]{8,}$";
         Pattern pattern = Pattern.compile(passwordRegex);
         Matcher matcher = pattern.matcher(data.trim());
         boolean result=matcher.matches();
