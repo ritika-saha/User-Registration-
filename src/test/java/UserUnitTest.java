@@ -10,6 +10,26 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class UserUnitTest {
 
+    @BeforeAll
+    public static void beforeall(){
+        System.out.println("Started Testing");
+    }
+
+    @AfterAll
+    public static void AfterAll(){
+        System.out.println("Ended Testing");
+    }
+
+    @BeforeEach
+    public void beforeEach(){
+        System.out.println("Testcase start");
+    }
+
+    @AfterEach
+    public void afterEach(){
+        System.out.println("Testcase end");   
+    }
+
     //tests for First name
     @ParameterizedTest
     @ValueSource(strings = {"Ritika","Ri","ritika","RitikA","12Yri","Hyuna"})
