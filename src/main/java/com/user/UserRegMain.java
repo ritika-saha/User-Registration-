@@ -33,6 +33,11 @@ public class UserRegMain {
         System.out.println(isValid?"Phone Number - VALID":"Phone Number -  INVALID");
 
 
+        //validating password
+        System.out.println("Enter User's Password");
+        String password=sc.nextLine();
+         isValid=testData.validatePassword(password);
+        System.out.println(isValid?"Password - VALID":"Password -  INVALID");
 
 
 
