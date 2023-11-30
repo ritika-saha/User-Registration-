@@ -13,6 +13,20 @@ public class UserRegMain {
         String fname=sc.nextLine();
         boolean isValid=testData.validateFirstName(fname);
         System.out.println(isValid?"First Name - VALID":"First Name -  INVALID");
+
+        //validating last name
+        System.out.println("Enter Last Name");
+        String lname=sc.nextLine();
+        isValid=testData.validateFirstName(lname);
+        System.out.println(isValid?"Last Name - VALID":"Last Name -  INVALID");
+
+
+
+
+
+
+
+        sc.close();
         
     }
 }

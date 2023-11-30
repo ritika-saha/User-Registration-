@@ -11,5 +11,10 @@ public class UserRegTest {
         boolean result=matcher.matches();
         return result;
     }
+
+     public boolean validateLastName(String data){
+        return validateFirstName(data);
+    }
+    
     
 }
