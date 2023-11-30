@@ -15,6 +15,14 @@ public class UserRegTest {
      public boolean validateLastName(String data){
         return validateFirstName(data);
     }
+
+    public boolean validateEmail(String data){
+        final String emailRegex = "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9]+\\.[a-zA-Z]{2,}";
+        Pattern pattern = Pattern.compile(emailRegex);
+        Matcher matcher = pattern.matcher(data);
+        boolean result=matcher.matches();
+        return result;
+    }
     
     
 }

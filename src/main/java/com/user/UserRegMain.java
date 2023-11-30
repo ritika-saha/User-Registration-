@@ -20,6 +20,12 @@ public class UserRegMain {
         isValid=testData.validateFirstName(lname);
         System.out.println(isValid?"Last Name - VALID":"Last Name -  INVALID");
 
+        //validating email
+        System.out.println("Enter user's Email");
+        String email=sc.nextLine();
+        isValid=testData.validateEmail(email);
+        System.out.println(isValid?"Email - VALID":"Email -  INVALID");
+
 
 
 
