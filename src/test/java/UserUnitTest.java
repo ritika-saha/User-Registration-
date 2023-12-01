@@ -84,7 +84,7 @@ public class UserUnitTest {
 
     //validate password
     @ParameterizedTest
-    @ValueSource(strings = {"Passw0rd!", "SecurePwd123$", "StrongPwd&", "WeakPwd", "Mo1%"})
+    @ValueSource(strings = {"Passw0rd!", "SecurePwd123$", "StrongPwd&", "WeakPwd", "Mbbbbbbbbbbo1%"})
     public void password(String data){
         UserRegTest testData=new UserRegTest();
         assertTrue(testData.validatePassword(data));

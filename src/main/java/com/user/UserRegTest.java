@@ -17,7 +17,7 @@ public class UserRegTest {
     }
 
     public boolean validateEmail(String data){
-        final String emailRegex = "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$";
+        final String emailRegex = "^[a-zA-Z0-9.$&%_+-]+@[a-zA-Z0-9-]+(\\.[a-zA-Z]{2,})+$";
         Pattern pattern = Pattern.compile(emailRegex,Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(data);
         boolean result=matcher.matches();
