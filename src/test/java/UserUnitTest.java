@@ -2,6 +2,7 @@ import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
+import com.user.UserRegException;
 import com.user.UserRegTest;
 
 import java.util.regex.Matcher;
@@ -35,7 +36,13 @@ public class UserUnitTest {
     @ValueSource(strings = {"Ritika","Ri","ritika","RitikA","12Yri","Hyuna"})
     public void fName(String data){
         UserRegTest testData=new UserRegTest();
-        assertTrue(testData.validateFirstName(data));
+        try {
+            assertTrue(testData.validateFirstName(data));
+        } 
+        catch (UserRegException e) {
+            e.printStackTrace();
+            fail(" Error in First name : "+e.getMessage());
+        }
     }
 
     //test for last name
@@ -43,7 +50,13 @@ public class UserUnitTest {
     @ValueSource(strings = {"Saha","Sah","saha","Sa","1Saha","SahA"})
     public void lName(String data){
         UserRegTest testData=new UserRegTest();
+        try{
         assertTrue(testData.validateLastName(data));
+        }
+        catch (UserRegException e) {
+            e.printStackTrace();
+            fail("Error in Last name : "+e.getMessage());
+        }
     }
 
     //test for email
@@ -71,7 +84,12 @@ public class UserUnitTest {
     "abc@gmail.com.aa.au"})
     public void email(String data){
          UserRegTest testData=new UserRegTest();
-        assertTrue(testData.validateEmail(data));
+        try {
+            assertTrue(testData.validateEmail(data));
+        } catch (UserRegException e) {
+            e.printStackTrace();
+            fail("Error in Email : "+e.getMessage());
+        }
     }
 
     //validate phone number
@@ -79,7 +97,12 @@ public class UserUnitTest {
     @ValueSource(strings = {"91 4848484848","914040404040","4949494949","91 696969","91 0919191919","uu 3838383838","91 939393939r"})
     public void phoneNumber(String data){
         UserRegTest testData=new UserRegTest();
-        assertTrue(testData.validatePhone(data));
+        try {
+            assertTrue(testData.validatePhone(data));
+        } catch (UserRegException e) {
+            e.printStackTrace();
+            fail("Error in Phone Number : "+e.getMessage());
+        }
     }
 
     //validate password
@@ -87,6 +110,11 @@ public class UserUnitTest {
     @ValueSource(strings = {"Passw0rd!", "SecurePwd123$", "StrongPwd&", "WeakPwd", "Mbbbbbbbbbbo1%"})
     public void password(String data){
         UserRegTest testData=new UserRegTest();
-        assertTrue(testData.validatePassword(data));
+        try {
+            assertTrue(testData.validatePassword(data));
+        } catch (UserRegException e) {
+            e.printStackTrace();
+            fail("Error in password: "+e.getMessage());
+        }
     }
 }

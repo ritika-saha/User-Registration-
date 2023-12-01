@@ -11,33 +11,34 @@ public class UserRegMain {
         //Validating first name
         System.out.println("Enter First Name");
         String fname=sc.nextLine();
-        boolean isValid=testData.validateFirstName(fname);
-        System.out.println(isValid?"First Name - VALID":"First Name -  INVALID");
+       // boolean isValid=testData.validateFirstName(fname);
+       // System.out.println(isValid?"First Name - VALID":"First Name -  INVALID");
 
         //validating last name
         System.out.println("Enter Last Name");
         String lname=sc.nextLine();
-        isValid=testData.validateFirstName(lname);
-        System.out.println(isValid?"Last Name - VALID":"Last Name -  INVALID");
+      //  isValid=testData.validateFirstName(lname);
+       // System.out.println(isValid?"Last Name - VALID":"Last Name -  INVALID");
 
+       
         //validating email
         System.out.println("Enter user's Email");
         String email=sc.nextLine();
-        isValid=testData.validateEmail(email);
-        System.out.println(isValid?"Email - VALID":"Email -  INVALID");
+      //  isValid=testData.validateEmail(email);
+       // System.out.println(isValid?"Email - VALID":"Email -  INVALID");
 
         //validating Phone Number
         System.out.println("Enter user's Phone Number");
         String phone=sc.nextLine();
-        isValid=testData.validatePhone(phone);
-        System.out.println(isValid?"Phone Number - VALID":"Phone Number -  INVALID");
+       // isValid=testData.validatePhone(phone);
+       // System.out.println(isValid?"Phone Number - VALID":"Phone Number -  INVALID");
 
 
         //validating password
         System.out.println("Enter User's Password");
         String password=sc.nextLine();
-         isValid=testData.validatePassword(password);
-        System.out.println(isValid?"Password - VALID":"Password -  INVALID");
+        // isValid=testData.validatePassword(password);
+       // System.out.println(isValid?"Password - VALID":"Password -  INVALID");
 
         //validating given emails
         String[] emails = {
@@ -64,11 +65,11 @@ public class UserRegMain {
             "abc@gmail.com.aa.au"
         };
 
-        for(String e:emails){
+       /** for(String e:emails){
             isValid=testData.validateEmail(e);
             System.out.print(e);
             System.out.println(isValid?" \t---- Email - VALID":" --- Email -  INVALID");
-        }
+        } */
 
 
         sc.close();
